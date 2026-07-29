@@ -17,14 +17,14 @@ jobs:
 
       - name: Get Dependencies
         run: flutter pub get
-        working-directory: Ai-avatar-app
+        working-directory: Ai-avatar-app/Ai-avatar-app
 
       - name: Build APK
         run: flutter build apk --release
-        working-directory: Ai-avatar-app
+        working-directory: Ai-avatar-app/Ai-avatar-app
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: release-apk
-          path: Ai-avatar-app/build/app/outputs/flutter-apk/app-release.apk
+          path: Ai-avatar-app/Ai-avatar-app/build/app/outputs/flutter-apk/app-release.apk
